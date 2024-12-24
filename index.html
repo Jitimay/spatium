@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpaceX</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<script>
+    let lastScroll = 0;
+    const header = document.querySelector('header');
+
+    window.addEventListener('scroll', () => {
+        const currentScroll = window.pageYOffset;
+        
+        if (currentScroll > lastScroll && currentScroll > 100) {
+            // Scrolling down & past the threshold
+            header.classList.add('hide');
+        } else {
+            // Scrolling up
+            header.classList.remove('hide');
+        }
+        
+        lastScroll = currentScroll;
+    });
+</script>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/logo.png" alt="SpaceX Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">IKIMASHINI</a></li>
+                <li><a href="#">SUKU</a></li>
+                <li><a href="#">AKARAVYO</a></li>
+                <li><a href="#">BUZZERS</a></li>
+                <li><a href="#">KIRANGA 0.1</a></li>
+                <!-- <li><a href="#">RIDESHARE</a></li>
+                <li><a href="#">STARSHIELD</a></li>
+                <li><a href="#">STARLINK</a></li> -->
+            </ul>
+            <div class="right-nav">
+                <a href="#" class="shop">SHOP</a>
+                <button class="menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <!-- <div class="spatium-text">SPATIUM LAPIS</div> -->
+            <div class="hero-content">
+                <span class="recent">BE PART OF IT</span>
+                <h1>IKIMASHINI<br>AVALABLE IN MARCH</h1>
+                <div class="cta">
+                    <button class="rewatch-btn">INVEST</button>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

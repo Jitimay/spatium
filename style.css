@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+}
+
+/* Header and Navigation */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    padding: 20px 0;
+    background: #000; /* Changed to solid black */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Add this to hide header on scroll */
+header.hide {
+    transform: translateY(-100%);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+    height: 30px; 
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.logo img {
+    height: 50px;  /* Increased from 30px */
+    width: auto;
+    object-fit: contain;
+    transform: scale(1.5);  /* Makes logo 1.5 times bigger */
+    transform-origin: left center;  /* Ensures scaling from left side */
+    padding: 5px 0;  /* Add some padding to prevent logo from touching header edges */
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: #888;
+}
+
+.right-nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.shop {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.menu-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.menu-btn span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: #fff;
+    margin: 4px 0;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background-image: url('images/buzzers.jpeg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;  /* Changed to column to accommodate both texts */
+    justify-content: center; /* Center vertically */
+    align-items: center;    /* Center horizontally */
+    padding: 0 50px;
+    margin-top: 0;
+    position: relative;     /* Added for absolute positioning of hero-content */
+}
+
+.spatium-text {
+    font-size: 72px;
+    font-weight: bold;
+    color: #FFD700;        /* Yellow color */
+    text-align: center;
+    margin-bottom: 200px;  /* Space between yellow text and mission info */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Optional: adds shadow for better readability */
+}
+
+.hero-content {
+    position: absolute;  /* Changed to absolute positioning */
+    bottom: 100px;      /* Distance from bottom */
+    left: 50px;         /* Distance from left */
+}
+
+.recent {
+    font-size: 16px;
+    font-weight: normal;
+    display: block;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.rewatch-btn {
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    padding: 15px 50px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.rewatch-btn:hover {
+    background: #fff;
+    color: #000;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .nav-links {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-content {
+        margin-bottom: 50px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+}
