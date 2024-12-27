@@ -1,3 +1,4 @@
+/* Reset and Base Styles */
 * {
     margin: 0;
     padding: 0;
@@ -17,11 +18,10 @@ header {
     top: 0;
     z-index: 100;
     padding: 20px 0;
-    background: #000; /* Changed to solid black */
+    background: #000;
     transition: transform 0.3s ease-in-out;
 }
 
-/* Add this to hide header on scroll */
 header.hide {
     transform: translateY(-100%);
 }
@@ -33,7 +33,7 @@ nav {
     max-width: 1400px;
     margin: 0 auto;
     padding: 0 20px;
-    height: 30px; 
+    height: 70px;
 }
 
 .logo {
@@ -43,12 +43,12 @@ nav {
 }
 
 .logo img {
-    height: 50px;  /* Increased from 30px */
+    height: 50px;
     width: auto;
     object-fit: contain;
-    transform: scale(1.5);  /* Makes logo 1.5 times bigger */
-    transform-origin: left center;  /* Ensures scaling from left side */
-    padding: 5px 0;  /* Add some padding to prevent logo from touching header edges */
+    transform: scale(1.5);
+    transform-origin: left center;
+    padding: 5px 0;
 }
 
 .nav-links {
@@ -103,27 +103,13 @@ nav {
     background-size: cover;
     background-position: center;
     display: flex;
-    flex-direction: column;  /* Changed to column to accommodate both texts */
-    justify-content: center; /* Center vertically */
-    align-items: center;    /* Center horizontally */
+    align-items: flex-end;
     padding: 0 50px;
     margin-top: 0;
-    position: relative;     /* Added for absolute positioning of hero-content */
-}
-
-.spatium-text {
-    font-size: 72px;
-    font-weight: bold;
-    color: #FFD700;        /* Yellow color */
-    text-align: center;
-    margin-bottom: 200px;  /* Space between yellow text and mission info */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Optional: adds shadow for better readability */
 }
 
 .hero-content {
-    position: absolute;  /* Changed to absolute positioning */
-    bottom: 100px;      /* Distance from bottom */
-    left: 50px;         /* Distance from left */
+    margin-bottom: 100px;
 }
 
 .recent {
@@ -185,10 +171,57 @@ h1 {
 
 
 
+/* Company Description Section */
+.company-description {
+    min-height: 100vh;
+    background-image: url('images/black.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 20px;
+}
+
+.company-title {
+    font-size: 72px;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    text-align: center;
+    letter-spacing: 2px;
+    background: linear-gradient(45deg, #fff, #888);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.description-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.description-content p {
+    font-size: 24px;
+    line-height: 1.6;
+    color: #fff;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
 /* Responsive Design */
 @media (max-width: 1200px) {
     .nav-links {
         display: none;
+    }
+    
+    .company-title {
+        font-size: 56px;
     }
 }
 
@@ -199,5 +232,25 @@ h1 {
 
     h1 {
         font-size: 36px;
+    }
+
+    .description-content p {
+        font-size: 18px;
+        padding: 0 20px;
+    }
+
+    .company-title {
+        font-size: 42px;
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .company-title {
+        font-size: 36px;
+    }
+    
+    .description-content p {
+        font-size: 16px;
     }
 }
