@@ -140,7 +140,11 @@ h1 {
     background: #fff;
     color: #000;
 }
+<<<<<<< HEAD
 /* Second page*/
+=======
+/*second page*/
+>>>>>>> 65c77b8 (Your commit message)
 .description {
     height: 100vh;
     background-size: cover;
@@ -169,6 +173,7 @@ h1 {
     line-height: 1.6;
 }
 
+<<<<<<< HEAD
 
 
 /* Company Description Section */
@@ -213,6 +218,8 @@ h1 {
     letter-spacing: 0.5px;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
+=======
+>>>>>>> 65c77b8 (Your commit message)
 
 /* Responsive Design */
 @media (max-width: 1200px) {
